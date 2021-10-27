@@ -30,7 +30,7 @@
                                 </button>
                             </items>
                         </group>
-                        <label width="136" height="23" alignment="center" id="kna-1j-Ieh">
+                        <label width="136" height="23" alignment="center" textAlignment="center" id="kna-1j-Ieh">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
                         </label>
                         <group width="114" height="73" alignment="center" verticalAlignment="center" id="UeT-bC-qrd">
@@ -43,7 +43,9 @@
                                 </button>
                                 <group width="62" height="72" alignment="center" verticalAlignment="center" id="lPs-eU-Quf">
                                     <items>
-                                        <imageView width="85" height="72" alignment="center" id="de4-Lu-OuP"/>
+                                        <imageView width="85" height="72" alignment="center" image="smiley.fill" catalog="system" id="de4-Lu-OuP">
+                                            <color key="tintColor" red="0.66274509800000003" green="0.87450980389999999" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
                                     </items>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </group>
@@ -107,5 +109,6 @@
         <image name="book.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="smiley.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

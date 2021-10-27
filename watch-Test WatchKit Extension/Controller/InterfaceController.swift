@@ -68,7 +68,18 @@ class InterfaceController: WKInterfaceController {
             }
             
             else {
-                print(error?.localizedDescription)
+                
+                DispatchQueue.main.async {
+                    self.userNameLbl.setAlpha(1)
+                    self.qrCodeImage.setImage(UIImage(systemName: "smiley.fill"))
+                    self.qrCodeImage.setAlpha(1)
+                    self.userTitleLbl.setAlpha(0)
+                    self.leftBtn.setAlpha(0)
+                    self.rightBtn.setAlpha(0)
+                    self.holderView.setAlpha(1)
+                    self.userNameLbl.setText("come soon...")
+                    
+                }
             }
         }
     }
