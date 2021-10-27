@@ -1,0 +1,6 @@
+framework module Pods_watch_Test_WatchKit_Extension {
+  umbrella header "Pods-watch-Test WatchKit Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

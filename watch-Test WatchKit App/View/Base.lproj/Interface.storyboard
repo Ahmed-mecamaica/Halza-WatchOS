@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FontsFree-Net-SFCompactDisplay-Regular.ttf">
+            <string>SFCompactDisplay-Regular</string>
+        </array>
+        <array key="SF-Compact-Display-Semibold.otf">
+            <string>SFCompactDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch_Test_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label height="15" alignment="center" id="kna-1j-Ieh">
+                            <fontDescription key="font" name="SFCompactDisplay-Semibold" family="SF Compact Display" pointSize="24"/>
+                        </label>
+                        <group width="1" height="93" alignment="center" verticalAlignment="center" id="UeT-bC-qrd">
+                            <items>
+                                <button width="22" height="30" alignment="left" verticalAlignment="center" backgroundImage="chevron.left" catalog="system" id="czG-Ka-G43">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="leftBtnTapped" destination="AgC-eL-Hgc" id="QS1-j2-T0Z"/>
+                                    </connections>
+                                </button>
+                                <group width="82" height="119" alignment="center" id="lPs-eU-Quf">
+                                    <items>
+                                        <imageView width="85" height="93" alignment="center" id="de4-Lu-OuP"/>
+                                    </items>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <button width="22" height="30" alignment="right" verticalAlignment="center" backgroundImage="chevron.right" catalog="system" id="b9Z-uQ-sgc">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="rightBtnTapped" destination="AgC-eL-Hgc" id="Gi7-LO-9TZ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" id="6J8-Ei-csI">
+                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="holderView" destination="UeT-bC-qrd" id="EgH-Wl-uKc"/>
+                        <outlet property="leftBtn" destination="czG-Ka-G43" id="Rmk-cS-GAg"/>
+                        <outlet property="qrCodeImage" destination="de4-Lu-OuP" id="Lx3-Fh-fmI"/>
+                        <outlet property="rightBtn" destination="b9Z-uQ-sgc" id="D4v-DC-2aR"/>
+                        <outlet property="userNameLbl" destination="kna-1j-Ieh" id="GCg-nh-4uT"/>
+                        <outlet property="userTitleLbl" destination="6J8-Ei-csI" id="PSd-BC-VMs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="343"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch_Test_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="watch_Test_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+    </resources>
+</document>
