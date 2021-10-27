@@ -9,9 +9,6 @@
         <array key="FontsFree-Net-SFCompactDisplay-Regular.ttf">
             <string>SFCompactDisplay-Regular</string>
         </array>
-        <array key="SF-Compact-Display-Semibold.otf">
-            <string>SFCompactDisplay-Semibold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Interface Controller-->
@@ -19,10 +16,24 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch_Test_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label height="15" alignment="center" id="kna-1j-Ieh">
-                            <fontDescription key="font" name="SFCompactDisplay-Semibold" family="SF Compact Display" pointSize="24"/>
+                        <group width="130" height="19" alignment="center" spacing="0.0" id="X5y-Wk-LwU">
+                            <items>
+                                <label width="120" height="17" alignment="right" text="HALZA QRme" id="wop-GK-sFK">
+                                    <color key="textColor" red="0.66274509800000003" green="0.87450980389999999" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="18"/>
+                                </label>
+                                <button width="22" height="30" alignment="left" backgroundImage="book.fill" catalog="system" id="H64-ow-nSI">
+                                    <color key="backgroundColor" red="0.66274509800000003" green="0.87450980389999999" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="leftBtnTapped" destination="AgC-eL-Hgc" id="Lzf-SO-apa"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="136" height="23" alignment="center" id="kna-1j-Ieh">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="15"/>
                         </label>
-                        <group width="1" height="93" alignment="center" verticalAlignment="center" id="UeT-bC-qrd">
+                        <group width="114" height="73" alignment="center" verticalAlignment="center" id="UeT-bC-qrd">
                             <items>
                                 <button width="22" height="30" alignment="left" verticalAlignment="center" backgroundImage="chevron.left" catalog="system" id="czG-Ka-G43">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,9 +41,9 @@
                                         <action selector="leftBtnTapped" destination="AgC-eL-Hgc" id="QS1-j2-T0Z"/>
                                     </connections>
                                 </button>
-                                <group width="82" height="119" alignment="center" id="lPs-eU-Quf">
+                                <group width="62" height="72" alignment="center" verticalAlignment="center" id="lPs-eU-Quf">
                                     <items>
-                                        <imageView width="85" height="93" alignment="center" id="de4-Lu-OuP"/>
+                                        <imageView width="85" height="72" alignment="center" id="de4-Lu-OuP"/>
                                     </items>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </group>
@@ -45,7 +56,7 @@
                             </items>
                         </group>
                         <label alignment="center" verticalAlignment="bottom" id="6J8-Ei-csI">
-                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
+                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="27"/>
                         </label>
                     </items>
                     <connections>
@@ -58,7 +69,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="343"/>
+            <point key="canvasLocation" x="220" y="353"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -93,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
     </resources>

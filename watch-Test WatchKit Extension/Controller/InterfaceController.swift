@@ -58,10 +58,8 @@ class InterfaceController: WKInterfaceController {
                     if let range = response.fileUri.range(of: ".png") {
                         let firstPart = response.fileUri[response.fileUri.startIndex..<range.upperBound]
                         self.qrCodeImage.sd_setImage(with: URL(string: String(firstPart))!)
-                        print(" url of image\(firstPart)") // print Hello
                     }
                     
-                    print("uri: \(response.fileUri)")
                     self.userTitleLbl.setText(self.medicalCaseName[self.counter])
                 }
                 self.animate(withDuration: 0.4) {
